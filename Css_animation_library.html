@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>CSS Animation Beispiele – erweitert</title>
+  <title>CSS Animation & Interaktive Tricks – erweitert</title>
   <style>
     body {
       font-family: sans-serif;
@@ -10,7 +10,7 @@
       flex-wrap: wrap;
       gap: 20px;
       padding: 20px;
-      background: #111827; /* dunkler Hintergrund, damit Effekte besser sichtbar sind */
+      background: #111827;
       color: white;
     }
 
@@ -31,173 +31,141 @@
 
     /* === 1. Schweben === */
     .float { animation: float 4s ease-in-out infinite; }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
     /* === 2. Pulsieren === */
     .pulse { animation: pulse 2s ease-in-out infinite; }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
 
     /* === 3. Drehen === */
     .rotate { animation: rotate 5s linear infinite; }
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+    @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
     /* === 4. Farbwechsel === */
     .color-change { animation: colorchange 6s linear infinite; }
-    @keyframes colorchange {
-      0%   { background: #ec4899; }
-      25%  { background: #f97316; }
-      50%  { background: #22c55e; }
-      75%  { background: #3b82f6; }
-      100% { background: #ec4899; }
-    }
+    @keyframes colorchange { 0%{ background:#ec4899;}25%{background:#f97316;}50%{background:#22c55e;}75%{background:#3b82f6;}100%{background:#ec4899;} }
 
-    /* === 5. Bounce (springen) === */
+    /* === 5. Bounce === */
     .bounce { animation: bounce 2s ease infinite; }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-40px); }
-    }
+    @keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-40px);} }
 
     /* === 6. Glassmorphism Glow === */
-    .glass {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255,255,255,0.3);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 0 10px rgba(255,255,255,0.2), 0 0 30px rgba(255,255,255,0.3);
-      animation: glasspulse 4s ease-in-out infinite;
-    }
-    @keyframes glasspulse {
-      0%, 100% { box-shadow: 0 0 10px rgba(255,255,255,0.2), 0 0 30px rgba(255,255,255,0.3); }
-      50% { box-shadow: 0 0 20px rgba(255,255,255,0.6), 0 0 50px rgba(255,255,255,0.8); }
-    }
+    .glass { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 0 10px rgba(255,255,255,0.2),0 0 30px rgba(255,255,255,0.3); animation:glasspulse 4s ease-in-out infinite; }
+    @keyframes glasspulse { 0%,100%{box-shadow:0 0 10px rgba(255,255,255,0.2),0 0 30px rgba(255,255,255,0.3);}50%{box-shadow:0 0 20px rgba(255,255,255,0.6),0 0 50px rgba(255,255,255,0.8);} }
 
     /* === 7. Neon Border === */
-    .neon {
-      background: black;
-      border: 2px solid #0ff;
-      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-      animation: neonflicker 1.5s infinite alternate;
-    }
-    @keyframes neonflicker {
-      0% { box-shadow: 0 0 5px #0ff; }
-      100% { box-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
-    }
+    .neon { background:black; border:2px solid #0ff; box-shadow:0 0 10px #0ff,0 0 20px #0ff; animation:neonflicker 1.5s infinite alternate; }
+    @keyframes neonflicker {0%{box-shadow:0 0 5px #0ff;}100%{box-shadow:0 0 20px #0ff,0 0 40px #0ff;}}
 
     /* === 8. Gradient Shift === */
-    .gradient-shift {
-      background: linear-gradient(270deg, #ff6ec4, #7873f5);
-      background-size: 400% 400%;
-      animation: gradientShift 8s ease infinite;
-    }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+    .gradient-shift { background:linear-gradient(270deg,#ff6ec4,#7873f5); background-size:400% 400%; animation:gradientShift 8s ease infinite; }
+    @keyframes gradientShift {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
 
     /* === 9. Morphing Blob === */
-    .blob {
-      background: linear-gradient(135deg, #34d399, #3b82f6);
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      animation: morph 6s ease-in-out infinite;
-    }
-    @keyframes morph {
-      0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-      50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-    }
+    .blob { background:linear-gradient(135deg,#34d399,#3b82f6); border-radius:60% 40% 30% 70% / 60% 30% 70% 40%; animation:morph 6s ease-in-out infinite; }
+    @keyframes morph {0%,100%{border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;}50%{border-radius:30% 60% 70% 40% / 50% 60% 30% 60%;}}
 
-    /* === 10. Flip Card (hover) === */
-    .flip-card { perspective: 1000px; }
-    .flip-inner {
-      width: 120px;
-      height: 120px;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 0.8s;
-    }
-    .flip-card:hover .flip-inner { transform: rotateY(180deg); }
-    .flip-front, .flip-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: white;
-    }
-    .flip-front { background: #6366f1; }
-    .flip-back { background: #ec4899; transform: rotateY(180deg); }
+    /* === 10. Flip Card === */
+    .flip-card { perspective:1000px; }
+    .flip-inner { width:120px;height:120px;position:relative;transform-style:preserve-3d;transition:transform 0.8s; }
+    .flip-card:hover .flip-inner{transform:rotateY(180deg);} 
+    .flip-front,.flip-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;font-weight:bold;color:white;}
+    .flip-front{background:#6366f1;} .flip-back{background:#ec4899;transform:rotateY(180deg);}
 
+    /* === 11. Scroll Reveal === */
+    .reveal{opacity:0;transform:translateY(40px);transition:all 1s ease;}
+    .reveal.show{opacity:1;transform:translateY(0);}
+
+    /* === 12. Parallax Hintergrund === */
+    .parallax{width:100%;height:200px;background:url('https://picsum.photos/800/400') center/cover fixed;border-radius:12px;}
+
+    /* === 13. Hover Image Zoom === */
+    .img-zoom{width:120px;height:120px;border-radius:12px;background:url('https://picsum.photos/200') center/cover;transition:transform 0.5s ease;}
+    .img-zoom:hover{transform:scale(1.2);}
+
+    /* === 14. Cursor Highlight === */
+    .cursor-highlight{position:relative;overflow:hidden;}
+    .cursor-highlight::after{content:"";position:absolute;width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:50%;transform:translate(-50%,-50%) scale(0);pointer-events:none;transition:transform 0.3s ease;}
+    .cursor-highlight:hover::after{transform:translate(-50%,-50%) scale(3);}
+
+    /* === 15. Dark/Light Mode === */
+    body.light-mode{background:#f9fafb;color:#111827;}
+    .toggle-btn{padding:10px 20px;background:#2563eb;border:none;border-radius:8px;cursor:pointer;color:white;font-weight:bold;transition:background 0.3s;}
+    .toggle-btn:hover{background:#1d4ed8;}
+
+    /* === 16. Animated Gradient Text === */
+    .gradient-text{font-size:1.2rem;font-weight:bold;background:linear-gradient(270deg,#ff0080,#7928ca,#2af598);background-size:600% 600%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:textGradient 8s ease infinite;}
+    @keyframes textGradient{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+    /* === 17. Clip-Path Shape === */
+    .clip-shape{width:100%;height:150px;background:linear-gradient(135deg,#06b6d4,#3b82f6);clip-path:polygon(0 0,100% 10%,100% 100%,0 90%);}
+
+    /* === 18. Sticky Section === */
+    .sticky-section{position:sticky;top:20px;width:100%;height:100px;background:#9333ea;display:flex;align-items:center;justify-content:center;}
+
+    /* === 19. Tilt Effect === */
+    .tilt{transition:transform 0.2s ease;}
+    .tilt:hover{transform:rotateX(10deg) rotateY(10deg);}
+
+    /* === 20. Skeleton Loader === */
+    .skeleton{width:120px;height:120px;border-radius:12px;background:linear-gradient(90deg,#2d3748 25%,#4a5568 50%,#2d3748 75%);background-size:200% 100%;animation:skeleton 1.5s infinite;}
+    @keyframes skeleton{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+
+    /* === 21. Progress Bar === */
+    .progress{width:120px;height:20px;background:#374151;border-radius:10px;overflow:hidden;}
+    .progress-inner{height:100%;width:0;background:#10b981;animation:progressAnim 5s forwards;}
+    @keyframes progressAnim{to{width:100%;}}
+
+    /* === 22. Circular Loader === */
+    .circular{width:60px;height:60px;border:6px solid #374151;border-top:6px solid #10b981;border-radius:50%;animation:spin 1s linear infinite;}
+    @keyframes spin{0%{transform:rotate(0);}100%{transform:rotate(360deg);}}
+
+    /* === 23. Glassmorphism Overlay === */
+    .overlay{width:200px;height:120px;background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:12px;display:flex;align-items:center;justify-content:center;}
   </style>
 </head>
 <body>
 
-  <div class="column">
-    <h3>Schweben</h3>
-    <div class="box float"></div>
-  </div>
+  <div class="column"><h3>Schweben</h3><div class="box float"></div></div>
+  <div class="column"><h3>Pulsieren</h3><div class="box pulse"></div></div>
+  <div class="column"><h3>Drehen</h3><div class="box rotate"></div></div>
+  <div class="column"><h3>Farbwechsel</h3><div class="box color-change"></div></div>
+  <div class="column"><h3>Bounce</h3><div class="box bounce"></div></div>
+  <div class="column"><h3>Glassmorphism Glow</h3><div class="box glass"></div></div>
+  <div class="column"><h3>Neon Effekt</h3><div class="box neon"></div></div>
+  <div class="column"><h3>Gradient Shift</h3><div class="box gradient-shift"></div></div>
+  <div class="column"><h3>Morphing Blob</h3><div class="box blob"></div></div>
+  <div class="column"><h3>Flip Card</h3><div class="flip-card"><div class="flip-inner"><div class="flip-front">Front</div><div class="flip-back">Back</div></div></div></div>
 
-  <div class="column">
-    <h3>Pulsieren</h3>
-    <div class="box pulse"></div>
-  </div>
+  <div class="column"><h3>Scroll Reveal</h3><div class="box reveal">Ich fade rein</div></div>
+  <div class="column"><h3>Parallax Hintergrund</h3><div class="parallax"></div></div>
+  <div class="column"><h3>Image Zoom</h3><div class="img-zoom"></div></div>
+  <div class="column cursor-highlight"><h3>Cursor Effekt</h3><div class="box"></div></div>
+  <div class="column"><h3>Dark/Light Mode</h3><button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button></div>
 
-  <div class="column">
-    <h3>Drehen</h3>
-    <div class="box rotate"></div>
-  </div>
+  <div class="column"><h3>Gradient Text</h3><div class="gradient-text">Bunter Text</div></div>
+  <div class="column"><h3>Clip-Path Shape</h3><div class="clip-shape"></div></div>
+  <div class="column"><h3>Sticky Section</h3><div class="sticky-section">Sticky!</div></div>
+  <div class="column"><h3>Tilt Effekt</h3><div class="box tilt"></div></div>
+  <div class="column"><h3>Skeleton Loader</h3><div class="skeleton"></div></div>
+  <div class="column"><h3>Progress Bar</h3><div class="progress"><div class="progress-inner"></div></div></div>
+  <div class="column"><h3>Circular Loader</h3><div class="circular"></div></div>
+  <div class="column"><h3>Glass Overlay</h3><div class="overlay">Overlay</div></div>
 
-  <div class="column">
-    <h3>Farbwechsel</h3>
-    <div class="box color-change"></div>
-  </div>
+  <script>
+    // Scroll-Reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 50) {
+          el.classList.add('show');
+        }
+      });
+    });
 
-  <div class="column">
-    <h3>Bounce</h3>
-    <div class="box bounce"></div>
-  </div>
-
-  <div class="column">
-    <h3>Glassmorphism Glow</h3>
-    <div class="box glass"></div>
-  </div>
-
-  <div class="column">
-    <h3>Neon Effekt</h3>
-    <div class="box neon"></div>
-  </div>
-
-  <div class="column">
-    <h3>Gradient Shift</h3>
-    <div class="box gradient-shift"></div>
-  </div>
-
-  <div class="column">
-    <h3>Morphing Blob</h3>
-    <div class="box blob"></div>
-  </div>
-
-  <div class="column">
-    <h3>Flip Card</h3>
-    <div class="flip-card">
-      <div class="flip-inner">
-        <div class="flip-front">Front</div>
-        <div class="flip-back">Back</div>
-      </div>
-    </div>
-  </div>
-
+    // Dark/Light Mode Toggle
+    function toggleMode() { document.body.classList.toggle('light-mode'); }
+  </script>
 </body>
 </html>
