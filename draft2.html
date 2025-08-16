@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code by Chris — Websites that bring you clients</title>
+  <meta name="description" content="Modern, mobile‑first business websites that win more calls, bookings and sales. Simple process, clear pricing, fast delivery." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--fg:#1f1b3a;--muted:#5b4b8a;--accent1:#8b5cf6;--accent2:#ec4899;--bg1:#faf5ff;--bg2:#eef2ff;--card:rgba(255,255,255,.9);--radius:22px;--shadow:0 10px 30px rgba(139,92,246,.18)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif;line-height:1.6;color:var(--fg);background:linear-gradient(135deg,var(--bg1) 0%, #fdf2f8 40%, var(--bg2) 100%)}
+    .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+    nav{position:sticky;top:0;z-index:40;background:rgba(250,245,255,.9);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(139,92,246,.12)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{font-weight:800;font-size:1.15rem;background:linear-gradient(45deg,var(--accent2),var(--accent1));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .nav-links{display:flex;gap:1rem}
+    .nav-links a{font-weight:600;text-decoration:none;color:var(--fg)}
+    header{padding:4.5rem 0 2.5rem}
+    .headline{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:800;margin:.2rem 0 1rem;background:linear-gradient(45deg,var(--accent2),var(--accent1));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .sub{font-size:1.15rem;color:var(--muted);max-width:60ch}
+    .benefits{margin:.9rem 0 1.2rem;padding-left:1rem;color:var(--fg)}
+    .cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.8rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:800;border-radius:999px;padding:1rem 1.2rem;box-shadow:var(--shadow)}
+    .btn-primary{color:#fff;background:linear-gradient(45deg,var(--accent2),var(--accent1))}
+    .btn-outline{color:var(--accent1);background:#fff;border:2px solid var(--accent1)}
+    section{padding:3.2rem 0}
+    .section-title{font-size:clamp(1.6rem,3vw,2.2rem);text-align:center;margin:0 0 1.6rem;background:linear-gradient(45deg,var(--accent2),var(--accent1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800}
+    .grid{display:grid;gap:1.2rem}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid rgba(139,92,246,.18);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
+    .muted{color:var(--muted)}
+    .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.4rem}
+    .tag{font-size:.8rem;padding:.25rem .6rem;border-radius:999px;background:rgba(139,92,246,.15);color:#392679;font-weight:600}
+    .freebie{background:linear-gradient(135deg,var(--accent2),var(--accent1));color:#fff;border-radius:var(--radius)}
+    .freebie .inner{display:grid;gap:1rem;justify-items:center;text-align:center}
+    .email-form{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;justify-content:center}
+    .email-form input[type=email]{min-width:260px;border:0;border-radius:999px;padding:.9rem 1.1rem}
+    .email-form button{border:0;border-radius:999px;padding:.9rem 1.2rem;font-weight:800}
+    .notice{font-size:.95rem;opacity:.95;margin-top:.6rem}
+    .contact-links{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+    .link{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.1rem;border-radius:999px;border:2px solid rgba(139,92,246,.28);background:#fff;text-decoration:none;color:var(--fg);font-weight:700}
+    .link:hover{background:linear-gradient(45deg,var(--accent2),var(--accent1));color:#fff}
+    footer{padding:2rem 0;color:var(--muted);text-align:center;font-size:.95rem}
+    @media (max-width:900px){.grid-3{grid-template-columns:1fr}.nav-links{display:none}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">Code by Chris</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Results</a>
+        <a href="#freebie">Free Guide</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <p class="muted">Websites that win customers</p>
+      <h1 class="headline">Get a website that brings you more calls, bookings and sales.</h1>
+      <p class="sub">I design and build modern, mobile‑first websites for small businesses. Clear message, fast to use, easy to trust — so visitors become paying customers.</p>
+      <ul class="benefits">
+        <li>Mobile‑first & fast loading</li>
+        <li>Clear call‑to‑action on every page</li>
+        <li>Trust elements (reviews, badges, guarantees)</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-primary" href="#freebie">Get the Free Website Checklist</a>
+        <a class="btn btn-outline" href="#contact">Talk about your website</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">How I help your business</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Modern Web Design</h3>
+            <p class="muted">A professional look that builds trust and makes you stand out. Clear layout, strong visuals, and copy that speaks to your customers.</p>
+          </article>
+          <article class="card">
+            <h3>Mobile‑First Websites</h3>
+            <p class="muted">Your site looks perfect on phones and loads quickly — because most of your customers visit on mobile. No pinching, no waiting.</p>
+          </article>
+          <article class="card">
+            <h3>Conversion Boost</h3>
+            <p class="muted">Strategic call‑to‑actions, booking/contact flows, and trust elements (testimonials, social proof) that turn visitors into clients.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <h2 class="section-title">Results my clients love</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Boutique Store</h3>
+            <p class="muted">New product pages + simplified checkout → <strong>+300% sales in 3 months</strong>.</p>
+            <div class="tags"><span class="tag">Online Store</span><span class="tag">Sales Uplift</span></div>
+          </article>
+          <article class="card">
+            <h3>Beauty Salon</h3>
+            <p class="muted">Online booking with clear services → <strong>Appointments doubled</strong> month‑over‑month.</p>
+            <div class="tags"><span class="tag">Booking</span><span class="tag">Local Business</span></div>
+          </article>
+          <article class="card">
+            <h3>Artist Portfolio</h3>
+            <p class="muted">Clear contact & commission flow → <strong>More paid inquiries</strong> from the first week.</p>
+            <div class="tags"><span class="tag">Portfolio</span><span class="tag">Leads</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="freebie" class="freebie">
+      <div class="container inner">
+        <h2>Free Website Launch Checklist</h2>
+        <p>25 simple checks to make your website ready to win customers.</p>
+        <ul style="max-width:700px;text-align:left;line-height:1.8">
+          <li>✔ What to show on your homepage to build instant trust</li>
+          <li>✔ The 3 must‑have buttons to get more calls & bookings</li>
+          <li>✔ Quick wins for speed and mobile usability</li>
+        </ul>
+        <form class="email-form" id="emailForm" action="#" method="post" novalidate>
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="your@email.com" required />
+          <button type="submit">Download</button>
+          <label style="display:flex;align-items:center;gap:.5rem;margin-top:.4rem">
+            <input type="checkbox" id="consent" required>
+            <span class="notice">I agree to receive the checklist and occasional emails. Unsubscribe anytime.</span>
+          </label>
+        </form>
+        <p id="success" class="notice" role="status" aria-live="polite" hidden>Success! Check your inbox for the download link.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Let’s make your website your best salesperson</h2>
+        <p class="muted" style="text-align:center">Tell me about your business and goals. I’ll suggest a simple plan you can act on right away.</p>
+        <div class="contact-links" style="margin-top:1rem">
+          <a class="link" href="mailto:hello@codebychris.dev">hello@codebychris.dev</a>
+          <a class="link" href="https://www.linkedin.com/" rel="me noopener" target="_blank">LinkedIn</a>
+          <a class="link" href="https://github.com/" rel="me noopener" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Code by Chris • <a href="#" style="color:inherit">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('emailForm');
+    const success = document.getElementById('success');
+    form?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      if(!document.getElementById('consent').checked){
+        alert('Please accept the consent.');
+        return;
+      }
+      success.hidden = false;
+      form.reset();
+    });
+  </script>
+</body>
+</html>
